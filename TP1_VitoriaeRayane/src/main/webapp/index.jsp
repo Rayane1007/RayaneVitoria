@@ -1,13 +1,11 @@
 <%-- 
     Document   : index
-    Created on : 17/10/2019, 09:25:47
+    Created on : 17/10/2019, 10:16:02
     Author     : aluno
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
- 
 <html>
  <head>
  <title> Como criar um formulário completo em HTML </title>
@@ -31,7 +29,7 @@
   <h1> Formulário HTML js</h1> 
   <h2> Preencha o formulário abaixo</h2><br />
 
-<form oninput="x.value=parseInt(a.value)" action="Script_do_Formulario.php" method="post">
+<form oninput="x.value=parseInt(a.value)" action="/MeuprimeiroServlet" method="post">
 
 <!-- DADOS PESSOAIS-->
 <fieldset>
@@ -111,7 +109,7 @@
    <div>
     <label>CPF:</label>
     <input type="text" name="cpf" size="9" maxlength="9"> - <input type="text" name="cpf2" size="2" maxlength="2">
-   </div>
+   </dnewjspiv>
 </fieldset>
 
 <br />
@@ -227,6 +225,4 @@
 </form>
 
  </body>
- 
 </html>
-
