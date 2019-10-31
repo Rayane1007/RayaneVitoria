@@ -19,7 +19,7 @@ public class MeuprimeiroServlet extends HttpServlet {
         String nomecompleto = nome+" "+sobrenome;
         System.out.println ("Nome completo: "+nomecompleto);
         response.sendRedirect("teste.jsp");
-        }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
