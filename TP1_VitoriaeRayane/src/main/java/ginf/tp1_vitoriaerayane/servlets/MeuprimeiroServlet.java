@@ -1,5 +1,5 @@
 
-package ginf.tp1_vitoriaerayane;
+package ginf.tp1_vitoriaerayane.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;

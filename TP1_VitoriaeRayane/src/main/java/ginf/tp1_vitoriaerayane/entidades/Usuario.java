@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ginf.tp1_vitoriaerayane;
+package ginf.tp1_vitoriaerayane.entidades;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
