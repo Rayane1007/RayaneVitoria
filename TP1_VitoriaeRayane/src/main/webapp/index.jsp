@@ -43,7 +43,7 @@
     <input type="text" name="sobrenome">
   </div>
   <br><br>
- <div>
+ <%--div>
     <label>Nascimento: </label>
     <label for="data">Data de nascimento: </label> 
     <input type="date" name="data">
@@ -99,7 +99,7 @@
         <option value="php">PHP</option> 
         <option value="go">Go</option> 
         </select>
-    </div>
+    </div--%>
   </fieldset>
   <fieldset>
     <legend>Dados de documentos</legend>
@@ -115,7 +115,7 @@
 
 <br />
 <!-- ENDEREÇO -->
-<fieldset>
+<%--fieldset>
  <legend>Dados de Endereço</legend>
  <div>
     <label for="rua">Rua:</label>
@@ -168,7 +168,7 @@
     <label for="cep">CEP: </label>
     <input type="text" name="cep" size="5" maxlength="5"> - <input type="text" name="cep2" size="3" maxlength="3">
    </div>
-</fieldset>
+</fieldset --%>
 <br />
 
 <!-- DADOS DE LOGIN -->

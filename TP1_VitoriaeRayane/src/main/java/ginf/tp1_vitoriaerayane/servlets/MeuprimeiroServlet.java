@@ -1,12 +1,17 @@
 
 package ginf.tp1_vitoriaerayane.servlets;
 
+import ginf.tp1_vitoriaerayane.entidades.Usuario;
+import ginf.tp1_vitoriaerayane.utilidades.HibernateUtil;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.math.BigDecimal;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 
 public class MeuprimeiroServlet extends HttpServlet {
@@ -18,8 +23,22 @@ public class MeuprimeiroServlet extends HttpServlet {
         String sobrenome = request.getParameter ("sobrenome");
         String nomecompleto = nome+" "+sobrenome;
         System.out.println ("Nome completo: "+nomecompleto);
-        response.sendRedirect("teste.jsp");
+        String senha = request.getParameter ("senha");
+       
+        Usuario user = new Usuario ();
+        user.setNome(nomecompleto);
+        user.setSenha(senha);
         
+        Double aleatorio = Math.random();
+        BigDecimal id= new BigDecimal (aleatorio);
+        user.setIdUsuario(id);
+                
+        Session sessaoBD = HibernateUtil.getSession();
+        Transaction tr = sessaoBD.getTransaction();
+        sessaoBD.save(user);
+        tr.commit();
+        sessaoBD.close();
+        response.sendRedirect("teste.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
