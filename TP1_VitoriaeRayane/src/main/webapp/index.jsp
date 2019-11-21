@@ -43,7 +43,11 @@
     <input type="text" name="sobrenome">
   </div>
   <br><br>
+<<<<<<< HEAD
  <%-- div>
+=======
+ <%--div>
+>>>>>>> c3b4a38323ff694bdca56e407efff13187bc5bb5
     <label>Nascimento: </label>
     <label for="data">Data de nascimento: </label> 
     <input type="date" name="data">
@@ -99,7 +103,11 @@
         <option value="php">PHP</option> 
         <option value="go">Go</option> 
         </select>
+<<<<<<< HEAD
     </div --%>
+=======
+    </div--%>
+>>>>>>> c3b4a38323ff694bdca56e407efff13187bc5bb5
   </fieldset>
   <%-- fieldset>
     <legend>Dados de documentos</legend>
@@ -115,7 +123,7 @@
 
 <br />
 <!-- ENDEREÇO -->
-<fieldset>
+<%--fieldset>
  <legend>Dados de Endereço</legend>
  <div>
     <label for="rua">Rua:</label>
