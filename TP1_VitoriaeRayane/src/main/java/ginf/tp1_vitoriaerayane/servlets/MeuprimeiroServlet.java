@@ -3,10 +3,6 @@ package ginf.tp1_vitoriaerayane.servlets;
 import ginf.tp1_vitoriaerayane.entidades.Usuario;
 import ginf.tp1_vitoriaerayane.utilidades.HibernateUtil;
 import java.io.IOException;
-<<<<<<< HEAD
-=======
-import java.io.PrintWriter;
->>>>>>> c3b4a38323ff694bdca56e407efff13187bc5bb5
 import java.math.BigDecimal;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,29 +10,32 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-<<<<<<< HEAD
-=======
 
->>>>>>> c3b4a38323ff694bdca56e407efff13187bc5bb5
 
 public class MeuprimeiroServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-<<<<<<< HEAD
         String nome = request.getParameter("nome");
         String sobrenome = request.getParameter("sobrenome");
         String nomeCompleto = nome + " " + sobrenome;
         System.out.println("Nome completo: " + nomeCompleto);
         String senha = request.getParameter("senha");
+        String Cpf = request.getParameter ("cpf");
+        String Rg =request.getParameter ("rg");
 
         Usuario user = new Usuario();
         user.setNome(nomeCompleto);
         user.setSenha(senha);
+        long cpf = Long.parseLong(Cpf);
+        int rg = Integer.parseInt(Rg);
+        user.setDocCpf(cpf);
+        user.setDocRg(Rg);
 
         double aleatorio = Math.random();
         BigDecimal id = new BigDecimal(aleatorio);
         user.setIdUsuario(id);
+    
 
         Session sessaoBD = HibernateUtil.getSession();
         Transaction tr = sessaoBD.beginTransaction();
@@ -44,27 +43,6 @@ public class MeuprimeiroServlet extends HttpServlet {
         tr.commit();
         sessaoBD.close();
 
-=======
-        String nome = request.getParameter ("nome");
-        String sobrenome = request.getParameter ("sobrenome");
-        String nomecompleto = nome+" "+sobrenome;
-        System.out.println ("Nome completo: "+nomecompleto);
-        String senha = request.getParameter ("senha");
-       
-        Usuario user = new Usuario ();
-        user.setNome(nomecompleto);
-        user.setSenha(senha);
-        
-        Double aleatorio = Math.random();
-        BigDecimal id= new BigDecimal (aleatorio);
-        user.setIdUsuario(id);
-                
-        Session sessaoBD = HibernateUtil.getSession();
-        Transaction tr = sessaoBD.getTransaction();
-        sessaoBD.save(user);
-        tr.commit();
-        sessaoBD.close();
->>>>>>> c3b4a38323ff694bdca56e407efff13187bc5bb5
         response.sendRedirect("teste.jsp");
     }
 
